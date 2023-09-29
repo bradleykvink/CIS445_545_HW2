@@ -80,20 +80,28 @@ header ul li img {
 section {
     width: 85%;
     margin: 0 auto;
-    height: 100vh;
+    height: 110vh;
     color: white;
-    padding-top: 5rem;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#home .grid {
+section:last-child {
+    border-bottom: none;
+}
+
+section .grid {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-#home .grid div {
+section .grid div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -151,13 +159,13 @@ section {
     background: rgba(170, 211, 100, .8);
 }
 
-#home .grid div img {
+section .grid div img {
     width: 100%;
     height: auto;
     z-index: 3;
 }
 
-#home .grid div .bg-rocket {
+section .grid div .bg-image {
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -168,4 +176,115 @@ section {
     border-radius: 50%;
     filter: blur(10px);
     background: radial-gradient(rgb(30, 45, 124), rgb(8,13,39) 70%);
+}
+
+#about {
+    height: 80vh;
+    padding: 7.5rem 0 7.5rem 0;
+}
+
+#about .grid-three {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    background: #1E2D7C4C;
+}
+
+#about .grid-three div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+    border-right: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+#about .grid-three div:last-child {
+    border-right: none;
+}
+
+#about .grid-three div h2,
+#about .grid-three div p span {
+    color: rgb(170, 211, 100);
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact form {
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#contact form div {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+#contact form div label {
+    color: white;
+    font-weight: lighter;
+}
+
+#contact form div input,
+#contact form div textarea {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0 1rem;
+}
+
+#contact form div textarea {
+    height: 10rem;
+    padding-top: 15px;
+}
+
+#contact form div input:focus,
+#contact form div textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#contact form div input::placeholder,
+#contact form div textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#contact form div button {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    background: rgb(170, 211, 100);
+    color: white;
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contact form div button:hover {
+    background: rgba(170, 211, 100, 0.8);
 }
